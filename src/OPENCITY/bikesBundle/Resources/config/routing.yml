@@ -1,0 +1,11 @@
+opencit_ybikes_ruta:
+    resource: "@OPENCITYbikesBundle/Resources/config/routing/ruta.yml"
+    prefix:   /ruta
+
+opencit_ybikes_station:
+    resource: "@OPENCITYbikesBundle/Resources/config/routing/station.yml"
+    prefix:   /station
+
+opencit_ybikes_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: OPENCITYbikesBundle:Default:index }

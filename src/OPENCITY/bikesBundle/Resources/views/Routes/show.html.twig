@@ -1,0 +1,30 @@
+{% extends '::menu.html.twig' %}
+
+{% block body -%}
+    <h1>Routes <small>{{ entity.name }}</small></h1>
+
+    <div class="row">
+  	<div class="col-sm-4"></div>
+
+            <span class="txtlabel">ID Route</span>
+            <span class="txt">{{ entity.id }}</span>
+
+            <span class="txtlabel">Origin Route</span>
+            <span class="txt">{{ entity.originRoute }}</span>
+
+            <span class="txtlabel">Destination Route</span>
+            <span class="txt">{{ entity.destinationRoute }}</span>
+
+            <span class="txtlabel">Date</span>
+            <span class="txt">{{ entity.date }}</span>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('route_home') }}">
+            Back to the list all routes
+        </a>
+    </li>
+  
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

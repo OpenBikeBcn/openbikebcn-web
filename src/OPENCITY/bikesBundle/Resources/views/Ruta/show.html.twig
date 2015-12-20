@@ -1,0 +1,29 @@
+{% extends '::menu.html.twig' %}
+
+{% block body -%}
+    <h1>Ruta</h1>
+
+    <div class="row">
+  	<div class="col-sm-4"></div>
+
+            <span class="txtlabel">Origin</span>
+            <span class="txt">{{ entity.stationOrigin.name }}</span>
+
+            <span class="txtlabel">Arrival</span>
+            <span class="txt">{{ entity.stationArrival.name }}</span>
+
+            <span class="txtlabel">Duration</span>
+            <span class="txt">{{ entity.duration }}</span>
+
+            <span class="txtlabel">Kilometers</span>
+            <span class="txt">{{ entity.kilometers }}</span>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('ruta') }}">
+            Back to the Cycling History
+        </a>
+    </li>
+
+</ul>
+{% endblock %}

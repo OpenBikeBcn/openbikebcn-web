@@ -1,0 +1,30 @@
+ruta:
+    path:     /
+    defaults: { _controller: "OPENCITYbikesBundle:Ruta:index" }
+
+ruta_show:
+    path:     /{id}/show
+    defaults: { _controller: "OPENCITYbikesBundle:Ruta:show" }
+
+ruta_new:
+    path:     /new
+    defaults: { _controller: "OPENCITYbikesBundle:Ruta:new" }
+
+ruta_create:
+    path:     /create
+    defaults: { _controller: "OPENCITYbikesBundle:Ruta:create" }
+    methods:  POST
+
+ruta_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "OPENCITYbikesBundle:Ruta:edit" }
+
+ruta_update:
+    path:     /{id}/update
+    defaults: { _controller: "OPENCITYbikesBundle:Ruta:update" }
+    methods:  [POST, PUT]
+
+ruta_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "OPENCITYbikesBundle:Ruta:delete" }
+    methods:  [POST, DELETE]

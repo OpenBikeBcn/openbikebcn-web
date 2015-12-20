@@ -1,0 +1,3 @@
+camins_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: CAMINSUserBundle:Default:index }

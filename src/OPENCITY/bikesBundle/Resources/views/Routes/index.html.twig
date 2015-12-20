@@ -1,0 +1,41 @@
+{% extends '::menu.html.twig' %}
+
+{% block body -%}
+    <h1>My Bike Routes</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Origin Station</th>
+                <th>Destination Station</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('route_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.originStation }}</td>
+                <td>{{ entity.destinationStation }}</td>
+                <td>{{ entity.date }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('route_show', { 'id': entity.id }) }}">Show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('route_edit', { 'id': entity.id }) }}">Remove from routes</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+
+    </ul>
+    {% endblock %}

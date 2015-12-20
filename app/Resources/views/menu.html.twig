@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block menu -%}
+
+<nav class="navbar navbar-default "><!-- navbar-inverse -->
+
+<div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="{{ asset('img/openbike.png') }}" width="100px"></a>
+    </div>
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        {% if app.user.userRole == 'OPERATOR' %}
+        <li class=""><a href="{{ path('station_home') }}">My Stations</a></li>
+        <li class=""><a href="{{ path('ruta') }}">My Routes</a></li>
+        {% else %}
+        <li class=""><a href="{{ path('station_home') }}">Home</a></li>
+        <li class=""><a href="{{ path('station_home') }}">My Stations</a></li>
+        <li class=""><a href="{{ path('ruta') }}">My Routes</a></li>
+        {% endif %}
+
+        <li class=""><a href="">Help</a></li>
+
+        </ul>
+        <div class="navbar-right">
+        <ul class="nav navbar-nav">
+			<li ><a href="{{ path('fos_user_security_logout')}}">Log out as {{ app.user.username }}</a></li>
+        </ul>
+        </div>
+	</div>
+
+</nav>
+
+{% endblock %}

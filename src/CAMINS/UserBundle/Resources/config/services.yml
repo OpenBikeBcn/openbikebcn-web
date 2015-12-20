@@ -1,0 +1,14 @@
+parameters:
+     security.authentication.success_handler.class: CAMINS\UserBundle\EventListener\LoginSuccessHandler
+
+services:
+    camins_user.registration.form.type:
+        class: CAMINS\UserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%, %security.role_hierarchy.roles%]
+        tags:
+            - { name: form.type, alias: camins_user_registration }
+
+    camins_user.authentication.success.listener:
+        class: %security.authentication.success_handler.class%
+        public: false
+        arguments: [@router, @security.context]

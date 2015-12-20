@@ -1,0 +1,4 @@
+services:
+#    opencit_ybikes.example:
+#        class: OPENCITY\bikesBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

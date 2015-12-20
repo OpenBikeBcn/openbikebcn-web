@@ -1,0 +1,15 @@
+parameters:
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: openbike
+    database_user: openbike
+    database_password: openbike
+    mongodb_name: openbike
+    mongodb_user: openbike
+    mongodb_password: openbike
+
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: openbike

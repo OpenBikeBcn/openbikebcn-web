@@ -1,0 +1,45 @@
+{% extends '::menu.html.twig' %}
+
+{% block body -%}
+    <h1>My Favourite Bike Stations</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('station_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.latitude }}</td>
+                <td>{{ entity.longitude }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('station_show', { 'id': entity.id }) }}">Show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('station_delete', { 'id': entity.id }) }}">Remove from Favorites</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('station_new') }}">
+                Add favorites stations
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

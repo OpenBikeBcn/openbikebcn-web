@@ -1,0 +1,28 @@
+{% extends '::menu.html.twig' %}
+
+{% block body -%}
+    <h1>Station <small>{{ entity.name }}</small></h1>
+
+    <div class="row">
+  	<div class="col-sm-4"></div>
+
+            <span class="txtlabel">Station ID</span>
+            <span class="txt">{{ entity.id }}</span>
+
+            <span class="txtlabel">Station Name</span>
+            <span class="txt">{{ entity.name }}</span>
+
+            <span class="txtlabel">Latitude</span>
+            <span class="txt">{{ entity.latitude }}</span>
+
+            <span class="txtlabel">Longitude</span>
+            <span class="txt">{{ entity.longitude }}</span>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('station_home') }}">
+            Back to all Favorite Stations
+        </a>
+    </li>
+</ul>
+{% endblock %}

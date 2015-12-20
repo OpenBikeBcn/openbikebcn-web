@@ -1,0 +1,25 @@
+opencit_ybikes_ruta_api:
+    resource: "@OPENCITYbikesBundle/Controller/RutaRESTController.php"
+    type:   rest
+    prefix:   /api
+
+opencit_ybikes_station_api:
+    resource: "@OPENCITYbikesBundle/Controller/StationRESTController.php"
+    type:   rest
+    prefix:   /api
+
+opencit_ybikes:
+    resource: "@OPENCITYbikesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+_index:
+    pattern:  /
+    defaults: { _controller: OPENCITYbikesBundle:Default:index }
+
+camins_user:
+    resource: "@CAMINSUserBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

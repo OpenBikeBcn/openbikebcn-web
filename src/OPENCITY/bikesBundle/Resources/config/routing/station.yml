@@ -1,0 +1,30 @@
+station:
+    path:     /
+    defaults: { _controller: "OPENCITYbikesBundle:Station:index" }
+
+station_show:
+    path:     /{id}/show
+    defaults: { _controller: "OPENCITYbikesBundle:Station:show" }
+
+station_new:
+    path:     /new
+    defaults: { _controller: "OPENCITYbikesBundle:Station:new" }
+
+station_create:
+    path:     /create
+    defaults: { _controller: "OPENCITYbikesBundle:Station:create" }
+    methods:  POST
+
+station_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "OPENCITYbikesBundle:Station:edit" }
+
+station_update:
+    path:     /{id}/update
+    defaults: { _controller: "OPENCITYbikesBundle:Station:update" }
+    methods:  [POST, PUT]
+
+station_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "OPENCITYbikesBundle:Station:delete" }
+    methods:  [POST, DELETE]
